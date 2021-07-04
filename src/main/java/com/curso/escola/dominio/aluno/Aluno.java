@@ -28,8 +28,8 @@ public class Aluno {
         this.telefones.add(new Telefone(ddd, numero));
     }
 
-    public CPF getCpf() {
-        return cpf;
+    public String getCpf() {
+        return cpf.getCPF();
     }
 
     public void setCpf(CPF cpf) {
@@ -44,8 +44,8 @@ public class Aluno {
         this.nome = nome;
     }
 
-    public Email getEmail() {
-        return email;
+    public String getEmail() {
+        return email.getEndereco();
     }
 
     public void setEmail(Email email) {

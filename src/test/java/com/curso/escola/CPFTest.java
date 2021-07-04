@@ -8,23 +8,21 @@ package com.curso.escola;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.Test;
 
-
-
 /**
  *
  * @author Alexandre Jales
  */
-public class EmailTest {
+public class CPFTest {
 
     @Test
-    void naoDeveriaCriarEmailsComEnderecosInvalidos() {
+    public void naoDeveCriarCpfComNumeroInvalido() {
         assertThrows(IllegalArgumentException.class,
-            () -> new Email(null));
+                () -> new CPF(null));
 
         assertThrows(IllegalArgumentException.class,
-            () -> new Email(""));
+                () -> new CPF(""));
 
         assertThrows(IllegalArgumentException.class,
-            () -> new Email("emailinvalido"));
+                () -> new CPF("99999999999"));
     }
 }

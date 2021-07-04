@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.curso.escola;
+package com.curso.escola.dominio.indicacao;
 
+import com.curso.escola.dominio.aluno.Aluno;
 import java.time.LocalDateTime;
 
 /**

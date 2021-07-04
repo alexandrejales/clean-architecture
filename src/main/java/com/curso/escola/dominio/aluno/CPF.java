@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.curso.escola;
+package com.curso.escola.dominio.aluno;
 
 /**
  *
  * @author Alexandre Jales
  */
-class CPF {
+public class CPF {
 
     private String numero;
 

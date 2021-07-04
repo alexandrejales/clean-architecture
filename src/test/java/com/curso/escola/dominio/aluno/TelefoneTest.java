@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.curso.escola;
+package com.curso.escola.dominio.aluno;
 
+import com.curso.escola.dominio.aluno.Telefone;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 

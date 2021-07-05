@@ -11,8 +11,8 @@ import java.util.List;
  *
  * @author Alexandre Jales
  */
-public interface RepositorioDeAluno {
-    void matricular(Aluno aluno);
-    void buscarPorCPF(CPF cpf);
+public interface RepositorioDeAlunos {
+    Aluno matricular(Aluno aluno);
+    Aluno buscarPorCPF(CPF cpf);
     List<Aluno> listarTodosAlunosMatriculados();
 }

@@ -7,17 +7,18 @@ package com.curso.escola.infra.aluno;
 
 import com.curso.escola.dominio.aluno.Aluno;
 import com.curso.escola.dominio.aluno.CPF;
-import com.curso.escola.dominio.aluno.RepositorioDeAluno;
 import com.curso.escola.dominio.aluno.Telefone;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.List;
+import com.curso.escola.dominio.aluno.RepositorioDeAlunos;
 
 /**
  *
  * @author Alexandre Jales
  */
-public class RepositorioDeAlunosComJDBC implements RepositorioDeAluno {
+public class RepositorioDeAlunosComJDBC implements RepositorioDeAlunos {
 
     private final Connection connection;
 
@@ -26,7 +27,7 @@ public class RepositorioDeAlunosComJDBC implements RepositorioDeAluno {
     }
 
     @Override
-    public void matricular(Aluno aluno) {
+    public Aluno matricular(Aluno aluno) {
         try {
             String sql = "INSERT INTO ALUNO VALUES(?,?,?)";
             PreparedStatement ps = this.connection.prepareStatement(sql);
@@ -42,14 +43,16 @@ public class RepositorioDeAlunosComJDBC implements RepositorioDeAluno {
                 ps.setString(1, telefone.getDdd());
                 ps.setString(2, telefone.getNumero());
             }
-        } catch (Exception e) {
+            
+            return aluno;
+        } catch (SQLException e) {
             
         }
-
+        return null;
     }
 
     @Override
-    public void buscarPorCPF(CPF cpf) {
+    public Aluno buscarPorCPF(CPF cpf) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
